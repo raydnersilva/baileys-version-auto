@@ -1,0 +1,16 @@
+{
+  "name": "baileys-version-auto",
+  "version": "1.0.0",
+  "main": "update-version.js",
+  "scripts": {
+    "start": "node update.js",
+    "update:version": "node update.js"
+  },
+  "keywords": [],
+  "author": "Raydner Silva",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "puppeteer": "^24.15.0"
+  }
+}
