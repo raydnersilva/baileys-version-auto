@@ -30,6 +30,10 @@ jobs:
         run: |
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
-          git add baileys-version.json
-          git commit -m "chore: update WhatsApp version"
-          git push
+          if [[ -n "$(git status --porcelain baileys-version.json)" ]]; then
+            git add baileys-version.json
+            git commit -m "chore: update WhatsApp version"
+            git push
+          else
+            echo "✅ Nenhuma alteração detectada. Nada para commitar."
+          fi
