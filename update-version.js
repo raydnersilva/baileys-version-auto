@@ -21,7 +21,7 @@ const puppeteer = require("puppeteer");
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 " +
       "(KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
   );
-  
+
   await page.goto("https://web.whatsapp.com", { waitUntil: "networkidle2" });
   await page.waitForSelector("#app", { timeout: 90000 });
 
@@ -32,8 +32,6 @@ const puppeteer = require("puppeteer");
     { timeout: 90000 } // 90 segundos
   );
 
-  const content = await page.content();
-  console.log(content);
 
   const version = await page.evaluate(() => window.Debug.VERSION);
   const versionArray = version.split(".").map((v) => parseInt(v));
