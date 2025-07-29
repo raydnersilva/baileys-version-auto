@@ -2,7 +2,7 @@ name: Atualizar versão WhatsApp Web
 
 on:
   schedule:
-    - cron: "* */1 * * *"
+    - cron: "* * */4 * *"
   workflow_dispatch:
 
 permissions:
